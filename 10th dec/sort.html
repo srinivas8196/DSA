@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selection Sort</title>
+</head>
+<body>
+    <script>
+
+function swap(a,i, j)
+{
+   var temp = a[i];
+   a[i] = a[j];
+   a[j] = temp;
+}
+function selection(arr)
+{
+   
+   for (var i = 0; i < arr.length - 1; i++)
+   {
+
+       minIndex = i;
+ 
+       for (j = i + 1; j < arr.length; j++)
+         if (arr[j] < arr[minIndex])
+              minIndex = j;
+              swap(arr, minIndex, i);
+   }
+   return arr;
+}
+const a=[23,45,1,4,2,100,45]
+console.log(selection(a));
+
+
+    </script>
+</body>
+</html>

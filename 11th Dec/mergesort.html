@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merge Sort</title>
+</head>
+<body>
+    <script>
+
+        var num = [5,4,7,8,10]
+
+        function merge(num)
+        {   
+            var m=mid-start+1; 
+            var n = end-mid;
+
+            var num1 = new Array(m);
+            var num2 = new Array(n);
+
+            for(i =0;i<m;i++)
+            {
+                num1[i]=num[start+i]; //starting value
+            }
+                for(var j =0; j<n; j++)
+                {
+                    num[j]=num[mid+1+j]; // starting from middle value to end value
+
+
+                } 
+
+                var p1=0;
+                var p2=0
+                var var3 = start;
+
+                while(p1<m&&p2<n)
+                {
+                    if(num1[p1]<num2(p2))
+                    {
+                        arr[var3]=num1[p1]
+                        p1++
+                    }else{
+                        arr[var3]=arr2[p2]
+                    }
+                    var3++;
+                }
+
+                while(p1<m)
+                {
+                   num[var3]=num1[p1]
+                   p1++;
+                   var3++;
+
+                }
+
+                while(p2<n)
+                {
+                   num[var3]=num2[p2]
+                   p2++;
+                   var3++;
+
+                }
+
+            }
+
+            function mergesort(arr,start,end)
+            {
+
+                while(start>=end)
+                return
+
+            var mid=start+parseInt((end-start)/2)
+            
+            mergesort(arr,start,mid)//recursion, calling function within same function
+            mergesort(arr,mid+1,end)
+            merge(arr,start,mid,end)
+        }
+mergesort(num,0,num.length-1)
+
+console.log(mergesort(num,0,num.length-1))
+
+for (var i = 0; i < num.length; i++)
+    console.log(num[i] + " ");
+    console.log(num)
+
+    </script>
+</body>
+</html>

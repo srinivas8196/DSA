@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary search</title>
+</head>
+<body>
+
+    <script>
+
+        var sortedArray =[ 2,4,6,8,10,12];
+        key = parseInt(prompt ("Enter the key"));
+                       
+        function binarySearch(sortedArray, key)
+    {
+    let start = 0;
+    let end = sortedArray.length - 1;
+
+    while (start <= end) {
+        let middle = Math.floor((start + end) / 2);
+
+        if (sortedArray[middle] === key) {
+            document.write("key found")
+            //return middle;
+        } else if (sortedArray[middle] < key) {
+            // continue searching to the right
+            start = middle + 1;
+        } else {
+            // search searching to the left
+            end = middle - 1;
+        }
+    }
+	document.write("key not found")
+    // return -1;
+}
+    binarySearch(sortedArray,key);
+    </script>
+
+<h3> Binary search</h3>
+ 
+    
+</body>
+</html>
