@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quee</title>
+</head>
+<body>
+
+    <script>
+    class quee
+        {
+            constructor ()
+            {
+                this.n1 = []
+
+            }
+
+            enquee(val)
+            {
+                return this.n1.push(val)
+            }
+
+            dequee()
+            {
+                // len = this.n1.length
+                
+                return this.n1.shift()
+            }
+
+            converttostring()
+            {
+                return this.n1.toString()
+            }
+        }
+
+    var s1 = new quee
+    console.log("s1: before iserting ", s1)
+   
+    s1.enquee(20)
+    s1.enquee(10)
+    s1.enquee(40)
+    console.log("converted to string:",s1.converttostring())
+    console.log("s1: after iserting ", s1)
+    // s1.dequee()
+    console.log("s1: after deleting ", s1)
+    
+
+
+    </script>
+
+
+
+    
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linked List with Stack</title>
+</head>
+<body>
+    <script>
+
+        class node
+        {
+            constructor(value)
+            {
+                this.value =value;
+                this.next = null;
+            }
+        }
+            class stack{
+
+                constructor()
+                {
+                    this.head =null;
+                    this.tail = null;
+                    this.length = 0;
+
+                }
+
+            
+
+            add(value)
+            {
+                var newnode = new node(value)
+                if(!this.head)
+                {
+                    this.head = newnode;
+                    this.tail = newnode;
+                }
+
+                else
+                {
+                    const temp = this.head;
+                    this.head= newnode;
+                    this.head.next=temp;
+
+                }
+                this.length++
+                return this;
+            }
+
+            remove()
+            {
+                if(!this.head)
+                return null;
+                let temp = this.head
+                this.head = this.head.next
+                this.length--
+                return temp.value
+
+            }
+            
+        }
+
+        var newlist = new stack()
+        newlist.add(10)
+        newlist.add(20)
+        newlist.add(50)
+        newlist.add(20)
+        console.log("list:", newlist)
+        newlist.remove()
+        console.log("after removal:", newlist)        
+
+    </script>
+</body>
+</html>

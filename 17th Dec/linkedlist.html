@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linked List</title>
+</head>
+<body>
+    <script>
+
+        class node
+        {
+            constructor (value)
+            {
+                this.value = value;
+                this.next = null;
+
+            }
+        }
+
+        class Linked_list   // linked list structure
+        {
+            constructor (value)
+            {
+                this.head={
+                    value: value,
+                    next: null
+
+                }
+                this.tail=this.head;
+                this.length = 1;
+
+                } 
+                append(value) //appending tail
+                {
+                    const newnode = new node(value)
+
+                    if(this.head == null)
+                    {
+                        this.head = Node;
+                    }
+                        else
+                        {
+                            this.tail.next = newnode;
+                            this.tail=newnode;
+                            this.length++;
+                        }
+                    }
+
+            printlinkedlist()
+            {
+            let i = this.head;
+            var arr=[]
+            while( i !== null)
+            {
+                arr.push(i.value);
+                i=i.next;
+            }
+            console.log(arr)
+        }
+        prepend(value)
+        {
+            const newnode = new node(value)
+            newnode.next = this.head;
+            this.head=newnode;
+            this.length++;
+            return this;
+        }
+
+        insert(value,index)
+        {
+            var newnode = new node(value)
+            let i=1;
+            let previous_node = this.head;
+            while(i<index)
+            {
+                previous_node=previous_node.index;
+                i++;
+            } 
+            newnode.next = previous_node.next;
+            previous_node.next = newnode;
+            return this;
+            }
+
+            search(value)
+            {
+                let currenthead=this.head;
+                while(currenthead!==null)
+                {
+                    if(currenthead.value == value)
+                    return true;
+                    currenthead=currenthead.next;
+
+                }
+                return false
+            }
+
+            deletehead()
+            {
+                this.head=this.head.next;
+                this.length--;
+                return this;
+
+            }
+
+            deletetail()
+            {
+                var previous = this.head;
+                while(previous.next.next!==null)
+                {
+                    previous=previous.next;
+                }
+                previous.next=null;
+                this.length--;
+                return this;
+
+            }
+
+            deletebyindex(index)
+            {
+                if(index == 0)
+                {
+                this.head=this.head.next;
+                this.length--;
+                return this;
+                }
+                              
+                    var previous = this.head;
+                    var count =0;
+                    while(count<index)
+                    {
+                        previous=previous.next
+                        count++;
+                    }
+                    previous.next=previous.next.next;
+                    this.length--;
+                
+                return this;
+            }
+      }
+            
+            
+            // var obj1 = new Linked_list(1000)
+            // obj1.append(500)
+            // obj1.append(4500)
+            // console.log(obj1)
+
+           
+
+        const n1 = new Linked_list(1)
+        n1.append(53)
+        n1.append(50)
+        n1.append(400)
+        n1.prepend(100)
+        n1.insert(60, 0)
+        console.log(n1.search(55))
+        n1.printlinkedlist()
+        n1.deletehead()
+        n1.printlinkedlist()
+        n1.deletetail()
+        n1.printlinkedlist()
+        n1.deletebyindex(3)
+        n1.printlinkedlist()
+
+     </script>
+</body>
+</html>

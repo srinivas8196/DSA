@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack</title>
+</head>
+<body>
+    <script>
+
+        class stack
+        {
+            constructor ()
+            {
+                this.arr = []
+
+            }
+
+            push(val)
+            {
+                this.arr.push(val)
+            }
+
+            pop()
+            {
+                return this.arr.pop()
+            }
+            
+            peek()
+            {
+                return this.arr[this.arr.length-1]
+            }
+
+            isempty()
+            {
+                return(this.arr.length==0)
+            }
+
+            emptythis()
+            {
+                return this.arr.length=0
+            }
+            
+            sizeofstack()
+            {
+                return this,arr.length
+            }
+
+            toarray()
+            {
+                return this.arr
+            }
+
+            coverttostring()
+            {
+                return this. arr.toString()
+
+            }
+
+        }
+
+        var s1 = new stack
+        console.log("s1: before iserting ", s1)
+        s1.push(20)
+        s1.push(40)
+        s1.push(90)
+        // document.write("s1: after iserting ", "s1")
+        console.log("s1: after iserting ", s1)
+        s1.pop()
+        console.log("s1: after pop", s1)
+    </script>
+</body>
+</html>
