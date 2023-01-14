@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback</title>
+</head>
+<body>
+    <script>
+        function user(id,name, callback) {
+        setTimeout(() => {
+            console.log("hello world");
+            callback({
+                id:id,
+                githubuser:name
+            })
+        }, 1000);
+
+    }
+  setTimeout(() => {
+	  user(101,"mohit",(emp1)=>{
+	        console.log(emp1);
+	    })
+}, 1000);
+   setTimeout(() => {
+	 user(102,"Ammar",(emp2)=>{
+	        console.log(emp2);
+	    })
+},2000);
+
+    </script>
+</body>
+</html>

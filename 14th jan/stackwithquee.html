@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack with Quee</title>
+</head>
+<body>
+    <script>
+
+    let stack1 = [];
+    let stack2 = [];
+  
+    // fr enq
+    function enqueue(element) {
+        stack1.push(element);
+        console.log("stack1 enquing: ", stack1);
+    }
+      function dequeue() {
+        if (stack2.length === 0) {
+            if (stack1.length === 0) {
+                console.log(
+            "queue empty, dq not possible");
+            }
+            while (stack1.length > 0) {
+                let dq = stack1.pop();
+                stack2.push(dq);
+            }
+        }
+        console.log("dequeing func in stack2: " + stack2.pop());
+    }
+  
+    enqueue("1");
+    enqueue("2");
+    enqueue("3");
+    dequeue();
+    dequeue();
+
+    </script>
+</body>
+</html>
