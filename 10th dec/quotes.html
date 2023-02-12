@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <script>
+      function displayQuote() {
+        var quotes = [
+          "Life is 10% what happens to you and 90% how you react to it.",
+          "The greatest glory in living lies not in never falling, but in rising every time we fall.",
+          "Don't watch the clock; do what it does. Keep going.",
+          "The only way to do great work is to love what you do.",
+          "Believe you can and you're halfway there."
+        ];
+  
+        var randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+  
+        document.getElementById("quoteDisplay").innerHTML = randomQuote;
+      }
+    </script>
+  </head>
+  <body onload="displayQuote()">
+    <p id="quoteDisplay"></p>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      function countStrings() {
+        var strings = ['abcde','sdaklfj','asdjf','na','basdn','sdaklfj','asdjf','na','asdjf','na','basdn','sdaklfj','asdjf'];
+        var queries = ['abcde','sdaklfj','asdjf','na','basdn'];
+        var result = [];
+        for (var i = 0; i < queries.length; i++) {
+          var count = 0;
+          for (var j = 0; j < strings.length; j++) {
+            if (strings[j] === queries[i]) {
+              count++;
+            }
+          }
+          result.push(count);
+        }
+        document.getElementById("result").innerHTML = result;
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="countStrings()"> click to count repeated strings </button>
+    <p id="result"></p>
+  </body>
+</html>
